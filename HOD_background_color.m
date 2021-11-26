@@ -1,15 +1,14 @@
-% 결과 위한 플랏; hands on/off background 
+% background 
 
-cd('D:\Dropbox (HuVA)\HuVA\과제_진행중\06.모비스 조향AI_2021(공동)\6. 실험\데이터 취득\전체 데이터 취합')
+cd('') % your current directory which you want to access
 
 close all
-data = readtable('vehicle_data_1_30_1');
+data = readtable('file name'); %your file name
 
 y = table2array(data);
 x = 1:length(y(:,1));
 
-%HOD 값에 따른 배경 색칠
-hod = y(:,242);
+answer = y(:,242); % we will make the background colored by this answer value (1: colored, 0: non-colored)
 
 hold on
 for i = 1:length(y(:,1))     
